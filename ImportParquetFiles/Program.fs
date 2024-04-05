@@ -26,7 +26,26 @@ let cityColumn =
 
 // Create a new Parquet file
 
-let myPath = "C:/Users/Mia.Meyer/Parquet Files/test.parquet"
-// let fileStream = System.IO.File.OpenWrite(myPath)
+let myPath = @"C:\Users\Mia.Meyer\Parquet Files\test3.parquet"
+let fileStream = System.IO.File.OpenWrite(myPath)
+fileStream.Close()
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+let fileStreamm = System.IO.File.OpenRead(@"C:\Users\Mia.Meyer\Parquet Files\Titanic.parquet")
 
+// Set Parquet options
+let options = ParquetOptions(TreatByteArrayAsString = true)
+
+// Create a Parquet reader
+let reader = ParquetReader.CreateAsync(fileStreamm, options).Result
+
+// Read the entire row group (you can adjust this as needed)
+let rowGroup = reader.ReadEntireRowGroupAsync().Result
+
+// Print out the data (assuming a single column named 'data')
+for row in rowGroup do
+    
+    let data = row.Data
+    printfn "Data: %A" data
+
+//mm 
