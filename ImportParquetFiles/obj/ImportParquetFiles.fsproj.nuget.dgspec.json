@@ -46,6 +46,16 @@
               "target": "Package",
               "version": "[8.0.102, )",
               "generatePathProperty": true
+            },
+            "FSharp.Stats": {
+              "target": "Package",
+              "version": "[0.5.1-preview.2, )",
+              "generatePathProperty": true
+            },
+            "Parquet.Net": {
+              "target": "Package",
+              "version": "[4.23.5, )",
+              "generatePathProperty": true
             }
           },
           "imports": [
