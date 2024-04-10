@@ -32,6 +32,7 @@ fileStream.Close()
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 let fileStreamm = System.IO.File.OpenRead(@"C:\Users\Mia.Meyer\Parquet Files\Titanic.parquet")
+// rather use Titanic data to test as it is large
 
 // Set Parquet options
 let options = ParquetOptions(TreatByteArrayAsString = true)
