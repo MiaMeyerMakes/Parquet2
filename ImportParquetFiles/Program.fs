@@ -26,7 +26,7 @@ let cityColumn =
 
 // Create a new Parquet file
 
-let myPath = "C:/Users/Mia.Meyer/Parquet Files/test.parquet"
+let myPath = "C:/Users/xxx/test.parquet"
 // let fileStream = System.IO.File.OpenWrite(myPath)
 
 
